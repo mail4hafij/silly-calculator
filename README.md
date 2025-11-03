@@ -32,7 +32,7 @@ Both versions use the **same underlying graph model and logic**, adapted to the 
         └── Program.cs
     └── Calculator.sln  
 └── /NodeJS
-    ├── graph-calculator.js
+    └── graph-calculator.js
     └── cli.js
     └── package.json
 ```
