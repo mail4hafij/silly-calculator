@@ -3,10 +3,18 @@
 // Github: https://github.com/mail4hafij/silly-calculator
 // ------------------------------------------------------
 
-// graph-calculator.js
+
 export class GraphCalculator {
   constructor(expression) {
-    if (expression == null) throw new Error("expression is required");
+    if (expression == null) {
+      throw new Error("expression is required");
+    }
+
+    const pattern = /[+\-*/]/;
+    if (!pattern.test(expression)) {
+      throw new Error("The expression must contain at least one operator (+, -, *, /).");
+    }
+
     this._expression = expression;
     this._nodes = [];
     this._edges = [];

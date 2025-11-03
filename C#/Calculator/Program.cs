@@ -61,7 +61,13 @@ public class GraphCalculator
 
     public GraphCalculator(string Expression)
     {
-        _expression = Expression ?? throw new ArgumentNullException(nameof(Expression));
+        if (string.IsNullOrWhiteSpace(Expression))
+            throw new ArgumentNullException(nameof(Expression));
+
+        if (!Expression.Any(c => c == '+' || c == '-' || c == '*' || c == '/'))
+            throw new FormatException("The expression must contain at least one operator (+, -, *, /).");
+
+        _expression = Expression;
         BuildGraph();
     }
 

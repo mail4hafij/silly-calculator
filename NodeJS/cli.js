@@ -4,7 +4,6 @@
 // ------------------------------------------------------
 
 
-// cli.js
 import readline from "readline";
 import { GraphCalculator } from "./graph-calculator.js";
 
