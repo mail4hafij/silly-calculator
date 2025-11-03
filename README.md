@@ -25,7 +25,7 @@ This repository contains **two separate implementations** of the same graph-base
 Both versions use the **same underlying graph model and logic**, adapted to the idioms of each language.
 
 ```
-/GraphCalculator
+/silly-calculator
 ├── /C#
     ├── /Calculator
         └── Calculator.csproj
